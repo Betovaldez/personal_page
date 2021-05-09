@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box;
+}
+body {
+    background-color: #8da595;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003846;
+  }
+
+  /*---------------navbar---------*/
+  
+ /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #c9d1cb;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #04202c;
+  text-align: center;
+  margin-left: 50px;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04202c;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*-----------About me----------*/
+
+.myname{
+  margin: 100px 200px;
+}
+.myname::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.myname img {
+  float: left;
+  border-radius: 50%;
+  height: auto;
+}
+.mytext{
+  padding-top: 50px;
+}
+
+.btn cv{
+  font-size: 2em;
+}
+.about .p{
+  margin-right: 100px;
+}
+
+
+@media (max-width: 600px) {
+  .myname {
+      text-align: center;
+  }
+  .myname img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+/*------------Portfolio---------*/
+
+.portsecc{
+  margin-top: 100px;
+  padding: 50px;
+}
+.box {
+  margin-left: 100px;
+  display: flex;
+  justify-content:start;
+  height: auto;
+}
+#repo{
+  margin-top: 10px;
+  margin-left: 290px;
+}
+
+.box img{
+  width: 450px;
+  height: 400px;
+  margin-left: 100px;
+}
+
+h5{
+  margin-left: 230px;
+}
+
+@media screen and (max-width:700px){
+  .box{
+      flex-direction: column;
+  }
+}
+/*------------Contact---------*/
+
+.personal-info {
+  margin-left: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#mycontact{
+  margin-left: 50px;
+}
+
+.scontact {
+  margin-right: 500px;
+}
+
+#social{
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px;
+  color: #04202c;
+}
+@media screen and (max-width:700px){
+  .personal-info{
+      flex-direction: column;
+  }
+}
